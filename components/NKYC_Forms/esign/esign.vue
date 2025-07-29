@@ -174,7 +174,7 @@ const resetProgress = () => {
 
 
 const createunsignedDocument = async () => {
-  alert();
+
 
   console.log("pages", domainurl.value)
   const headertoken = htoken
@@ -209,7 +209,7 @@ const createunsignedDocument = async () => {
     if (data.payload.status == 'ok') {
       completeProgress();
       createEsign()
-      alert();
+     
     }
 
     else if (data.payload.status == 'error') {
@@ -228,7 +228,7 @@ const createunsignedDocument = async () => {
 };
 
 const createEsign = async () => {
-  alert();
+ 
 
   console.log("pages", domainurl.value)
 
@@ -253,10 +253,10 @@ const createEsign = async () => {
     });
 
     if (!response.ok) throw new Error(`Network error: ${response.status}`);
-    console.log("alert12:", data)
+ 
 
     const decryptedData = await response.json();
-    console.log("alert13:", data)
+   
 
     const data = await decryptionresponse(decryptedData);
     console.log("alert14:", data)
@@ -285,10 +285,10 @@ const createEsign = async () => {
     }
   } catch (error) {
     console.error('Create Esign failed:', error.message);
-    console.log("alert2:", data)
+   
 
   } finally {
-    console.log("alert3:", data)
+  
     content.value = true;
     loading.value = false;
   }

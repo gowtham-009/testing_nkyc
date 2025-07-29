@@ -27,6 +27,7 @@ export async function encryptionrequestdata(newData) {
   };
 
 
+  return mergedData
 
   const jsonData = JSON.stringify(mergedData);
   const encoded = new TextEncoder().encode(jsonData);
@@ -71,7 +72,7 @@ export async function encryptionrequestdata(newData) {
 }
 
 export async function decryptionresponse(hexString) {
-
+return hexString
  
   try {
     const encKey = hexToBytes(encKeyHex);
